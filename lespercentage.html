@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<!-- Designined by Naveen paul -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Le's Percentage Calculator </title>
+    
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+ body{
+  /* height: 100vh; */
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+  /* padding: 10px; */
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+} 
+.container{
+  max-width: 700px;
+  margin-top: 10px;
+  width: 100%;
+  /* height: 100vh; */
+   /* justify-content: none;
+  align-items: none; */
+  
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.container-hidden{
+  visibility: hidden;
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  text-align: left;
+  align-items: left;
+ 
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+  text-align: left;
+  align-items: left;
+  
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+ form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Philosopher;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .button{
+   height: 45px;
+   margin: 35px 0;
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: rgb(255, 254, 254);
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6); 
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+ 
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
+/*  This is for popup styles */
+/* ======================================== */
+.container1{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(81, 91, 87);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+.btn{
+    padding:10px 60px;
+    background: #fff;
+    border:0;
+    outline:none;
+    font-weight: 500;
+    font-size: 22px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.popup{
+    width:400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top:0;
+    /* top:50%; */
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    visibility: hidden;
+    text-align: center;
+    padding:0 30px 30px;
+    color:#333;
+    transition:transform 0.4s, top 0.4s;
+
+
+}
+.open-popup{
+    visibility: visible;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+.popup img{
+    width:100px;
+    margin-top: -50px;
+    border-radius:50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+
+}
+.popup #hb{
+    font-size: 38px;
+    font-weight: 500;
+    margin:30px 0 10px;
+}
+.popup #finalbtn{
+    width:100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color:#fff;
+    outline:none;
+    border: 0;
+    font-size: 18px;
+    border-radius:10px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ======================================================== */
+
+  </style>
+    </head>
+
+<body>
+  <div class="wrapper">
+    <nav>
+      <input type="checkbox" id="show-search">
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><a href="#">NaveenPaul</a></div>
+        <ul class="links">
+          <li><a href="Home.html">Home</a></li>
+          <li>
+            <a href="#" class="desktop-link" onmouseover="f();">Overall Percentage</a>
+            <input type="checkbox" id="show-features">
+            <label for="show-features">Overall Percentage</label>
+            <ul>
+              <li><a href="percentage.html">For Regulars</a></li>
+              <li><a href="lespercentage.html">For Le's</a></li>
+              
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="desktop-link">Semesters</a>
+            <input type="checkbox" id="show-services">
+            <label for="show-services">Semesters</label>
+            <ul>
+              <li><a href="sgpa 1-1.html">Semester 1</a></li>
+              <li><a href="sgpa 1-2.html">Semester 2</a></li>
+              <li><a href="sgpa 2-1.html">Semester 3</a></li>
+              <li><a href="sgpa 2-2.html">Semester 4</a></li>
+              <li><a href="sgpa 3-1.html">Semester 5</a></li>
+              <li><a href="sgpa 3-2.html">Semester 6</a></li>
+              <li><a href="sgpa 4-1.html">Semester 7</a></li>
+              <li><a href="sgpa 4-2.html">Semester 8</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://www.jntufastupdates.com/jntu-kakinada/" class="desktop-link">JNTUK Updates</a>
+            <input type="checkbox" id="show-services">
+            <label for="show-services">JNTUK Updates</label>
+           
+          </li>
+          <li><a href="Biocards.html">About</a></li>
+        </ul>
+      </div>
+      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+      <form action="#" class="search-box">
+        <input type="text" placeholder="Type Something to Search..." required>
+        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+      </form>
+    </nav>
+  </div>
+
+  
+  <center><div class="container" id="container">
+    <div class="title">&percnt; Calculator⚡EEE⚡</div>
+    <div class="content">
+       <form action="#" >  <!--onsubmit="return validate()" -->
+        <div class="user-details">
+          <!-- <div class="input-box">
+            <span class="details">Enter SGPA of 1-1</span>
+            <input type="text" placeholder="Enter 1-1 SGPA" id="a"required>
+          </div>
+          <div class="input-box">
+            <span class="details">Enter SGPA of 1-2</span>
+            <input type="text" placeholder="Enter 1-2 SGPA"id="b" required>
+          </div> -->
+          <div class="input-box">
+            <span class="details">Enter SGPA of 2-1</span>
+            <input type="text" placeholder="Enter 2-1 SGPA" id="c"required>
+          </div>
+          <div class="input-box">
+            <span class="details">Enter SGPA of 2-2</span>
+            <input type="text" placeholder="Enter 2-2 SGPA" id="d"required>
+          </div>
+          <div class="input-box">
+            <span class="details">Enter SGPA of 3-1</span>
+            <input type="text" placeholder="Enter 3-1 SGPA" id="e"required>
+          </div>
+          <div class="input-box">
+            <span class="details">Enter SGPA of 3-2</span>
+            <input type="text" placeholder="Enter 3-2 SGPA" id="f" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Enter SGPA of 4-1</span>
+            <input type="text" placeholder="Enter 4-1 SGPA" id="g"required>
+          </div>
+          <div class="input-box">
+            <span class="details">Enter SGPA of 4-2</span>
+            <input type="text" placeholder="Enter 4-2 SGPA" id="h" required>
+          </div>
+        </div>
+        
+        <div class="gender-details">
+        
+         <center><span class="gender-title" id="result">&#10084;Naveen Paul&#10084;</span></center> 
+         
+        </div>
+        <div class="button">
+          <input type="submit" id="btnl" onclick="login()" value="Submit">
+        </div>
+        <div class="popup" id="popup">
+          <img src="https://toppng.com//public/uploads/preview/check-mark-html-done-icon-11563029359rpmvepeinu.png">
+          <h2 id="hb">Thank You!</h2>
+          <p id="para" style="color:red;font-family:Philosopher;font-weight: bold;font-size: 20px;">&#128071Your percentage:&#128071</p>
+      
+          <button type="button" id="finalbtn" onclick="closepopup()">OK</button>
+         </div>
+
+      </form>
+    </div>
+  </div>
+</center>
+
+
+  <script>
+    
+    function f(){
+       var s= document.getElementById("container").classList;
+       s.toggle("container-hidden");
+    
+    
+     }
+    
+//  function validate(){
+//     var one=document.getElementById("a").value;
+//     var two=document.getElementById("b").value;
+//     var three=document.getElementById("a").value;
+//     var four=document.getElementById("b").value;
+//     var five=document.getElementById("a").value;
+//     var six=document.getElementById("b").value;
+//     var seven=document.getElementById("a").value;
+//     var eight=document.getElementById("b").value;
+//     if(one==""||two==""||three==""||four==""||five==""||six==""||seven==""||eight==""){
+//         alert("Please Enter All Fields");
+//         return false;
+//     }else{
+   
+  function closepopup(){
+        popup.classList.remove("open-popup");
+        window.open("#");
+      
+  
+    }
+      
+  function login(){
+    // var a1=parseFloat(document.getElementById("a").value);
+    // var a2=parseFloat(document.getElementById("b").value);
+
+    var b1=parseFloat(document.getElementById("c").value);
+    var b2=parseFloat(document.getElementById("d").value);
+
+    var c1=parseFloat(document.getElementById("e").value);
+    var c2=parseFloat(document.getElementById("f").value);
+
+    var d1=parseFloat(document.getElementById("g").value);
+    var d2=parseFloat(document.getElementById("h").value);
+    
+    
+    var r1=((b1*parseInt(22))+(b2*parseInt(22))+(c1*parseInt(21))+(c2*parseInt(21))+(d1*parseInt(22))+(d2*parseInt(24)));
+    var r2=((parseInt(22))+(parseInt(22))+(parseInt(21))+(parseInt(21))+(parseInt(22))+(parseInt(24)));
+    var res=parseFloat(r1/r2);
+    var finalres=((res-parseFloat(0.75))*10);
+    var fi=finalres.toFixed(2);
+    // alert("Percentage is: "+fi+"%"+"\nThank You!");
+    // document.getElementById("result").innerHTML+="&#128071;Percentage:&#128071;\n"+"&hearts;"+fi+"%"+"&hearts;";
+   
+    if(window.confirm("Percentage is: "+fi+"%"+"\nThank You!")){
+ 
+
+    document.querySelector("#btnl").addEventListener("click",function(){
+    var popup=document.getElementById("popup");
+  
+    
+        popup.classList.add("open-popup");
+        document.getElementById("para").innerHTML+="<br>"+fi+"&nbsp;%";
+       
+       
+    
+    
+    });
+  }
+    
+   
+  
+  }
+
+   
+  </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioData</title>
+    <link rel="stylesheet" type="text/css" href="bio.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style>
+      .container-hidden{
+        visibility: hidden;
+
+      }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+          <input type="checkbox" id="show-search">
+          <input type="checkbox" id="show-menu">
+          <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+          <div class="content">
+          <div class="logo"><a href="#">NaveenPaul</a></div>
+            <ul class="links">
+              <li><a href="Home.html">Home</a></li>
+              <li>
+                <a href="#" class="desktop-link" onmouseover="f();">Overall Percentage</a>
+                <input type="checkbox" id="show-features">
+                <label for="show-features">Overall Percentage</label>
+                <ul>
+                  <li><a href="percentage.html">For Regulars</a></li>
+                  <li><a href="lespercentage.html">For Le's</a></li>
+                  
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="desktop-link" onmouseover="f();">Semesters</a>
+                <input type="checkbox" id="show-services">
+                <label for="show-services">Semesters</label>
+                <ul>
+                    <li><a href="sgpa 1-1.html">Sem 1-1</a></li>
+                    <li><a href="sgpa 1-2.html">Sem 1-2</a></li>
+                    <li><a href="sgpa 2-1.html">Sem 2-1</a></li>
+                    <li><a href="sgpa 2-2.html">Sem 2-2</a></li>
+                    <li><a href="sgpa 3-1.html">Sem 3-1</a></li>
+                    <li><a href="sgpa 3-2.html">Sem 3-2</a></li>
+                    <li><a href="sgpa 4-1.html">Sem 4-1</a></li>
+                    <li><a href="sgpa 4-2.html">Sem 4-2</a></li>
+                  </ul>
+              </li>
+              <li>
+                <a href="https://www.jntufastupdates.com/jntu-kakinada/" class="desktop-link">JNTUK Updates</a>
+                <input type="checkbox" id="show-services">
+                <label for="show-services">JNTUK Updates</label>
+               
+              </li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </div>
+          <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+          <form action="#" class="search-box">
+            <input type="text" placeholder="Type Something to Search..." required>
+            <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+          </form>
+        </nav>
+      </div>
+    <div class="container" id="container">
+     
+        <h2>	
+            &#128293;I am Living By the Grace of God&#128293;</h2>
+             <!-- CARD-1-->
+    <div class="card">
+        <div  class="image">
+            <img src="Naveen.jpg" alt="Not Found">
+            
+        </div>
+        <div class="title">
+         <h1>Naveen Paul</h1>
+        </div>
+        <div class="des">
+            <p>Servant of God</p>
+            <button onclick="btn()">Amen</button>
+        </div>
+    </div>
+    
+
+</div>
+<script>
+  function f(){
+       var s= document.getElementById("container").classList;
+       s.toggle("container-hidden");
+    
+    
+     }
+   function btn(){
+    alert("GOD BLESS YOU....!")
+   }
+    </script>
+
+</body>
+</html>

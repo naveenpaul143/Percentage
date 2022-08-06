@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>SGPA 4-2</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <style>
+           
+            
+                @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+                *{
+    margin:0px;
+    padding:0px;
+    box-shadow: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color: rgba(165, 165, 165, 0.306);
+    /* background-image:url("https://wallpaperaccess.com/full/754632.jpg") ;
+    background-repeat: no-repeat;
+    background-attachment: cover;
+    background-position: center; */
+}
+h1{
+    color:rgb(190, 0, 0);
+    font-family: Philosopher;
+}
+h3{
+    color:black;
+}
+
+#name{
+    color:rgb(6, 7, 7);
+    font-size: 20px;
+    font-weight:bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    padding:5px;
+    margin-top: 10%;
+   
+}
+ #one{
+    color:rgb(8, 4, 249);
+    margin-bottom: 15px;
+}
+h3{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+#two{
+    margin-top:10px;
+}
+table{
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    width:70px;
+    border-color:rgb(7, 7, 7);
+     background-color:rgba(160, 211, 217, 0.605);
+     border-radius:10px; 
+     border-bottom-color: bisque;
+      border-top-color: rgb(252, 254, 248);
+      box-shadow: 2px 2px 2px 2px rgb(215, 203, 203);
+      border:2px solid rgb(152, 138, 138);
+}
+table:hover{
+    background-color: rgb(189, 115, 115); 
+    color:white;
+    
+}
+
+button,#reset{
+   
+    border:1px solid black;
+    border-radius: 8px;
+    padding: 6px;
+    margin-right:10px;
+    width: 70px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px black;
+    background-color: rgb(204, 21, 21);
+    color:rgb(255, 255, 255);
+
+    
+}
+button:hover{
+   background-color: black;
+    transition: 0.5s;
+}
+#reset:hover{
+    background-color: black;
+     transition: 0.5s;
+ }
+           
+
+</style>
+
+    </head>
+    
+   <body>
+    <div class="wrapper">
+        <nav>
+          <input type="checkbox" id="show-search">
+          <input type="checkbox" id="show-menu">
+          <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+          <div class="content">
+          <div class="logo"><a href="#">NaveenPaul</a></div>
+            <ul class="links">
+              <li><a href="Home.html">Home</a></li>
+              <li>
+                <a href="#" class="desktop-link">Overall Percentage</a>
+                <input type="checkbox" id="show-features">
+                <label for="show-features">Overall Percentage</label>
+                <ul>
+                  <li><a href="percentage.html">For Regulars</a></li>
+                  <li><a href="lespercentage.html">For Le's</a></li>
+                  
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="desktop-link">Semesters</a>
+            <input type="checkbox" id="show-services">
+            <label for="show-services">Semesters</label>
+                <ul>
+                    <li><a href="sgpa 1-1.html">Sem 1-1</a></li>
+                    <li><a href="sgpa 1-2.html">Sem 1-2</a></li>
+                    <li><a href="sgpa 2-1.html">Sem 2-1</a></li>
+                    <li><a href="sgpa 2-2.html">Sem 2-2</a></li>
+                    <li><a href="sgpa 3-1.html">Sem 3-1</a></li>
+                    <li><a href="sgpa 3-2.html">Sem 3-2</a></li>
+                    <li><a href="sgpa 4-1.html">Sem 4-1</a></li>
+                    <li><a href="sgpa 4-2.html">Sem 4-2</a></li>
+                  </ul>
+              </li>
+              <li>
+                <a href="https://www.jntufastupdates.com/jntu-kakinada/" class="desktop-link">JNTUK Updates</a>
+                <input type="checkbox" id="show-services">
+                <label for="show-services">JNTUK Updates</label>
+               
+              </li>
+              <li><a href="Biocards.html">About</a></li>
+            </ul>
+          </div>
+          <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+          <form action="#" class="search-box">
+            <input type="text" placeholder="Type Something to Search..." required>
+            <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+          </form>
+        </nav>
+      </div>
+    
+      
+    <div class="container">
+       
+    <h1>Calculate your sgpa of 4-2 Sem</h1>  <br> <br> 
+    
+   <form>
+ 
+                  <div class="span4">
+                    <h3 id="one">Enter Details (Subject Names, Grade, Credits)</h3>
+                        <h2 style="color:black">OR</h2>
+                    <h3 id="two" style="color:rgb(235, 4, 112)">Enter Details ( Grade, Credits)</h3>
+                </div>
+             <center> <table>
+                    <tr>
+                    <th style="color:black">Subject Name</th>
+                    <th style="color:rgb(0, 0, 0)">Grade</th>
+                    <th style="color:rgb(11, 11, 11)">Credits</th>
+                    </tr> <tr>
+                        <td align="center"><input class="form-control" type="text" name="subjectname[]" placeholder="Enter your Subject Name" /></td>
+                     <td> <select id="s1">
+                        <option disabled hidden selected>select</option>
+                        <option value="10">O</option>
+                        <option value="9" >S</option>
+                        <option value="8">A</option>
+                        <option value="7">B</option>
+                        <option value="6">C</option>
+                        <option value="5">D</option>
+                        <option value="0">F</option>
+                    </select>
+                    </td>
+                    <td align="center"><input  type="numeric" id="a" placeholder="Enter your Credits" /></td>
+                        </tr> <tr>
+                            <td align="center"><input class="form-control" type="text" name="subjectname[]" placeholder="Enter your Subject Name" /></td>
+                     <td> <select id="s2">
+                        <option disabled hidden selected>select</option>
+                        <option value="10">O</option>
+                        <option value="9">S</option>
+                        <option value="8">A</option>
+                        <option value="7">B</option>
+                        <option value="6">C</option>
+                        <option value="5">D</option>
+                        <option value="0">F</option>
+                    </select>
+                    </td>
+                    <td align="center"><input  type="numeric"  id="b"placeholder="Enter your Credits" /></td>
+                        </tr> <tr>
+                            <td align="center"><input class="form-control" type="text" name="subjectname[]" placeholder="Enter your Subject Name" /></td>
+                            <td> <select id="s3">
+                                <option disabled hidden selected>select</option>
+                                <option value="10">O</option>
+                                <option value="9">S</option>
+                                <option value="8">A</option>
+                                <option value="7">B</option>
+                                <option value="6">C</option>
+                                <option value="5">D</option>
+                                <option value="0">F</option>
+                            </select>
+                    <td align="center"><input  type="numeric" id="c"placeholder="Enter your Credits" /></td>
+                        </tr> <tr>
+                            <td align="center"><input class="form-control" type="text" name="subjectname[]" placeholder="Enter your Subject Name" /></td>
+                            <td> <select id="s4">
+                                <option disabled hidden selected>select</option>
+                                <option value="10">O</option>
+                                <option value="9">S</option>
+                                <option value="8">A</option>
+                                <option value="7">B</option>
+                                <option value="6">C</option>
+                                <option value="5">D</option>
+                                <option value="0">F</option>
+                            </select>
+                    <td align="center"><input  type="numeric"  id="d"placeholder="Enter your Credits" /></td>
+                        </tr> <tr>
+                            <td align="center"><input class="form-control" type="text" name="subjectname[]" placeholder="Enter your Subject Name" /></td>
+                            <td> <select id="s5">
+                                <option disabled hidden selected>select</option>
+                                <option value="10">O</option>
+                                <option value="9">S</option>
+                                <option value="8">A</option>
+                                <option value="7">B</option>
+                                <option value="6">C</option>
+                                <option value="5">D</option>
+                                <option value="0">F</option>
+                            </select>
+                    <td align="center"><input  type="numeric"id="e" placeholder="Enter your Credits" /></td>
+                        </tr> <tr>
+                            <td align="center"><input class="form-control" type="text" name="subjectname[]" placeholder="Enter your Subject Name" /></td>
+                            <td> <select id="s6">
+                                <option disabled hidden selected>select</option>
+                                <option value="10">O</option>
+                                <option value="9">S</option>
+                                <option value="8">A</option>
+                                <option value="7">B</option>
+                                <option value="6">C</option>
+                                <option value="5">D</option>
+                                <option value="0">F</option>
+                            </select>
+                    <td align="center"><input  type="numeric" id="f" placeholder="Enter your Credits" /></td>
+                        </tr> <tr>
+                    <!--
+                            <td> <select>
+                                <option value="10">O</option>
+                                <option value="9">S</option>
+                                <option value="8">A</option>
+                                <option value="7">B</option>
+                                <option value="6">C</option>
+                                <option value="5">D</option>
+                                <option value="0">F</option>
+                            </select>
+                    <td align="center"><input type="numeric"  placeholder="Enter your Credits" /></td>-->
+                        </tr></table><br></center> 
+                        <button type="submit" id="btn">Submit</Button>&nbsp;&nbsp;
+                            <input type="reset" value="Reset" id="reset">
+                     
+        </form>
+        
+      
+
+
+     
+        <br>
+       
+        
+       
+      <h3 id="name">&hearts;Naveen Paul&hearts;</h3>
+
+      
+    
+
+<script>
+   
+   
+      
+    document.querySelector("#btn").addEventListener("click",function(){
+         var a= parseInt(document.querySelector("#a").value);
+         var b=parseInt(document.querySelector("#b").value);
+         var c= parseInt(document.querySelector("#c").value);
+       var d=parseInt(document.querySelector("#d").value);
+     var e= parseInt(document.querySelector("#e").value);
+     var f=parseInt(document.querySelector("#f").value);
+    //  alert(a+","+b+","+c+","+d+","+e+","+f);
+     var s1=document.querySelector("#s1").value;
+    var s2=document.querySelector("#s2").value;
+     var s3=document.querySelector("#s3").value;
+     var s4=document.querySelector("#s4").value;
+     var s5=document.querySelector("#s5").value;
+     var s6=document.querySelector("#s6").value;
+     //alert(s1+s2+","+s3+","+s4+","+s5+","+s6);
+     var r1=((a*s1)+(b*s2)+(c*s3)+(d*s4)+(e*s5)+(f*s6));
+     var r2=(a+b+c+d+e+f);
+     var res=(r1/r2);
+  if(window.confirm("Your SGPA is: "+ res.toFixed(2)+"\nThank You!")){
+    window.open("#");
+  }
+  
+ 
+
+    });
+    
+
+    
+    
+ </script>
+</div>
+    </body>
+    
+</html>

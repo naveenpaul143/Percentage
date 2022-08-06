@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>center alignments</title>
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> <link rel="stylesheet" href="style.css">
+<style>
+   
+body{
+    
+    justify-content: center;
+   text-align: center;
+    align-items: center;
+    background: linear-gradient(135deg,#71b7e6,#9b59b6);
+    
+
+} 
+.container{
+    position: absolute;
+   border:2px solid black;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    max-width: 700px;
+    width: 100%;
+    background:#f9f9f6;
+    padding:25px 30px;
+    border-radius:5px;
+    box-shadow: 5px 5px 5px rgb(253, 253, 252);
+    
+    
+}
+.container-hidden{
+    visibility: hidden;
+     
+}
+ 
+.container .card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card .one{
+    width: calc(100% /2 =20px);
+    margin-bottom: 10px;
+
+}
+@media (max-width:584px){
+    .container{
+        max-width: 100%;
+        margin-top:10px;
+      
+    }.card .one{ 
+      
+        
+        width:100%;
+    
+    }
+    
+}
+span{
+    margin-top:10px;
+    margin-left:105px;
+    margin-right:70px;
+    color:wheat;
+    border:2px solid rgb(18, 18, 18);
+    background-color:black;
+    border-radius: 7px;
+    padding: 5px;
+    border-width: 1px;
+   display: inline-block;
+   justify-content: center;
+   align-items: center;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   box-shadow: 2px 2px 2px black;
+   cursor: pointer;
+   
+}
+span:hover{
+    background-color: green;
+    color:wheat;
+    box-shadow: 5px 5px 5px greenyellow;
+}
+a{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color:white;
+}
+nav .active{
+    background-color: red;
+}
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+          <input type="checkbox" id="show-search">
+          <input type="checkbox" id="show-menu">
+          <label for="show-menu" class="menu-icon" onclick="f()"><i class="fas fa-bars"></i></label>
+          <div class="content">
+          <div class="logo"><a href="#">NaveenPaul</a></div>
+            <ul class="links">
+              <li><a href="Home.html" class="active">Home</a></li>
+              <li>
+                <a href="#" class="desktop-link">Overall Percentage</a>
+                <input type="checkbox" id="show-features">
+                <label for="show-features">Overall Percentage</label>
+                <ul>
+                  <li><a href="percentage.html">For Regulars</a></li>
+                  <li><a href="lespercentage.html">For Le's</a></li>
+                  
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="desktop-link"  onmouseover="f();">Semesters</a>
+                <input type="checkbox" id="show-services">
+                <label for="show-services">Semesters</label>
+                <ul>
+                    <li><a href="sgpa 1-1.html">Sem 1-1</a></li>
+                    <li><a href="sgpa 1-2.html">Sem 1-2</a></li>
+                    <li><a href="sgpa 2-1.html">Sem 2-1</a></li>
+                    <li><a href="sgpa 2-2.html">Sem 2-2</a></li>
+                    <li><a href="sgpa 3-1.html">Sem 3-1</a></li>
+                    <li><a href="sgpa 3-2.html">Sem 3-2</a></li>
+                    <li><a href="sgpa 4-1.html">Sem 4-1</a></li>
+                    <li><a href="sgpa 4-2.html">Sem 4-2</a></li>
+                  </ul>
+              </li>
+              <li>
+                <a href="https://www.jntufastupdates.com/jntu-kakinada/" class="desktop-link">JNTUK Updates</a>
+                <input type="checkbox" id="show-services">
+                <label for="show-services">JNTUK Updates</label>
+               
+              </li>
+              <li><a href="Biocards.html">About</a></li>
+            </ul>
+          </div>
+          <label for="show-search" class="search-icon" ><i class="fas fa-search"></i></label>
+          <form action="#" class="search-box">
+            <input type="text" placeholder="Type Something to Search..." required>
+            <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+          </form>
+        </nav>
+      </div>
+    
+    <div class="container" id="container">
+        <div class="card">
+            <div class="one">
+                <span class="detailes"><a href="sgpa 1-1.html">SGPA 1-1</a></span> 
+            </div>
+        
+        <div class="one">
+            <span class="detailes"><a href="sgpa 1-2.html">SGPA 1-2</a></span> 
+        </div>
+        <div class="one">
+            <span class="detailes"><a href="sgpa 2-1.html">SGPA 2-1</a></span> 
+        </div>
+        <div class="one">
+            <span class="detailes"><a href="sgpa 2-2.html">SGPA 2-2</a></span> 
+        </div>
+        <div class="one">
+            <span class="detailes"><a href="sgpa 3-1.html">SGPA 3-1</a></span> 
+        </div>
+        <div class="one">
+            <span class="detailes"><a href="sgpa 3-2.html">SGPA 3-2</a></span> 
+        </div>
+        <div class="one">
+            <span class="detailes"><a href="sgpa 4-1.html">SGPA 4-1</a></span> 
+        </div>
+        <div class="one">
+            <span class="detailes"><a href="sgpa 4-2.html">SGPA 4-2</a></span> 
+        </div>
+    </div>
+
+    </div>
+    
+    <script>
+        //  function f1(){
+    //    var s= document.getElementById("container").classList;
+    //    s.add("container-hidden");
+    //     document.getElementById("sem").onmouseout=s.remove("container-hidden");
+    //  }
+     
+     function f(){
+       var s= document.getElementById("container").classList;
+       s.toggle("container-hidden");
+    
+    
+     }
+    
+
+
+     
+    //  function f1(){
+    //    var s= document.getElementById("container").classList;
+    //    s.remove("container-hidden");
+
+    //  }
+    </script>
+</body>
+</html>
